@@ -1,0 +1,10 @@
+services:
+  jenkins-master:
+    build: 
+      context: jenkins-master
+      dockerfile: ./Dockerfile
+    container_name: jenkins-master
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./jenkins-master/.jenkins_home:/var/jenkins_home
