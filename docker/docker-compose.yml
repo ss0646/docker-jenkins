@@ -10,3 +10,11 @@ services:
       - ./master/jenkins.yaml:/var/jenkins_home/casc_configs/jenkins.yaml
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml
+  
+  agent001:
+    container_name: jenkins-agent001
+    image: jenkins/ssh-slave:latest-jdk11
+    volumes:
+      - ./../jenkins/agent/agent001/jenkins_home:/var/jenkins_home
+    environment:
+      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/1SP5CUcsUg/untnUY7KdE8lNnW0/WvKuQ/gxjM2zFJvDdRGFdI6SPltjTkckSHuDyOdKEeqoIeWAtb8RwILCd304yIV/QGaFU51lh3vwFqAb706PTPWY2lbOYO9m7/M6xiumXXveZRZaaDEUsYv7hmNkE0f41C4mYCMgdI63Y6DoV+IOmE83VioOEzLus4acAw8DpnYc+HapFrZYt1gGbENmfc6xiuOp1YAEsy7JsLuhpxJe4FSXZvM3DH21bx/zKGkrC7x2ivZMjR12J3sR8pt+U4woyY8RDAfnk2PyhUtnstGqvpZ92fw2fsHjqTf2V/13gOOL4yaqwJt1ZnXw48CLoTiftd9kXgilXmDzXVdVL84GrAy6jQt1PsUZqgsgv+0teM7V3QY7zHKZ4saWGe8g42ZoqqMYbXXlKgwfrrW9xTWp2cEpmoTsUpFx2kmgMZ/ZcMs5i+2p5NIjuHufpfQvV051Dg//CNFmeVqsCHK+MxpD/se0Mr+0xZimjQE= jenkins@a40c50031b0a
