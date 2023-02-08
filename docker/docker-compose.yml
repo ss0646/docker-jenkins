@@ -7,9 +7,6 @@ services:
       - "8080:8080"
     volumes:
       - ./../jenkins/master/jenkins_home:/var/jenkins_home
-      - ./master/jenkins.yaml:/var/jenkins_home/casc_configs/jenkins.yaml
-    environment:
-      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml
   
   agent001:
     container_name: jenkins-agent001
