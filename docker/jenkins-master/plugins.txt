@@ -10,6 +10,7 @@ checks-api:1.8.1
 cloudbees-folder:6.800.v71307ca_b_986b
 commons-lang3-api:3.12.0-36.vd97de6465d5b_
 commons-text-api:1.10.0-27.vb_fa_3896786a_7
+configuration-as-code:1569.vb_72405b_80249
 credentials-binding:523.vd859a_4b_122e6
 credentials:1214.v1de940103927
 display-url-api:2.3.7
