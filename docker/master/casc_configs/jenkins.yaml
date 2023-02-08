@@ -29,15 +29,14 @@ jenkins:
       enableCaptcha: false
       users:
       - id: "admin"
-        name: "seiji_saito"
+        name: "admin"
         properties:
+        - "apiToken"
+        - "mailer"
         - "myView"
         - preferredProvider:
             providerId: "default"
         - "timezone"
-        - mailer:
-            emailAddress: "seiji_saito@f4samurai.jp"
-        - "apiToken"
   slaveAgentPort: 50000
   updateCenter:
     sites:
