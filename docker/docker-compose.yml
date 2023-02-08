@@ -1,10 +1,12 @@
 services:
   master:
     build: 
-      context: master
-      dockerfile: ./Dockerfile
+      context: ./master
     container_name: jenkins-master
     ports:
       - "8080:8080"
     volumes:
       - ./master/.jenkins_home:/var/jenkins_home
+      - ./master/casc_configs:/var/jenkins_casc_configs
+    environment:
+      - CASC_JENKINS_CONFIG=/var/jenkins_casc_configs
