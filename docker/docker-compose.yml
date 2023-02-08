@@ -6,7 +6,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./master/.jenkins_home:/var/jenkins_home
-      - ./master/casc_configs:/var/jenkins_casc_configs
+      - ./../jenkins/master/jenkins_home:/var/jenkins_home
+      - ./master/jenkins.yaml:/var/jenkins_home/casc_configs/jenkins.yaml
     environment:
-      - CASC_JENKINS_CONFIG=/var/jenkins_casc_configs
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml
